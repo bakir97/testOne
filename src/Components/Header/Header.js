@@ -2,12 +2,12 @@ import React from 'react';
 import {View, Text} from 'react-native';
 import {styles} from './styles';
 
-const Loader = () => {
+const Header = () => {
   return (
     <View style={styles.container}>
-      <Text>Loading</Text>
+      <Text style={styles.header}>Gists</Text>
     </View>
   );
 };
 
-export default Loader;
+export default Header;
