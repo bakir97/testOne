@@ -2,10 +2,10 @@ import {useCallback, useEffect, useState} from 'react';
 import {getGists} from '../services/gistsServices';
 
 export const useList = () => {
-  const [list, setList] = useState([]);
+  const [list, setList] = useState();
   const [page, setPage] = useState(1);
   const [loading, setLoading] = useState(false);
-  const [initialLoading, setInitialLoading] = useState(true);
+  const [initialLoading, setInitialLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState(null);
 
   //initial fetch

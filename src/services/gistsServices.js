@@ -1,5 +1,5 @@
 import axios from 'axios';
-import {api} from './Api';
+import {api} from './api';
 
 export const getGists = page => {
   const composedUrl = `${api}?page=${page}`;
