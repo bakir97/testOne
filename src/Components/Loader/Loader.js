@@ -2,9 +2,9 @@ import React from 'react';
 import {View, Text} from 'react-native';
 import {styles} from './styles';
 
-const Loader = () => {
+const Loader = ({small}) => {
   return (
-    <View style={styles.container}>
+    <View style={!small && styles.fullContainer}>
       <Text>Loading</Text>
     </View>
   );

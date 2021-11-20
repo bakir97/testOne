@@ -15,4 +15,4 @@ const GistItem = ({owner, files}) => {
   );
 };
 
-export default GistItem;
+export default React.memo(GistItem);

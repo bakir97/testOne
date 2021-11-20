@@ -6,7 +6,8 @@ import Loader from '../../Components/Loader';
 import {useList} from '../../hooks/useList';
 
 const GistsScreen = () => {
-  const {list, initialLoading} = useList();
+  const {list, initialLoading, handleLoadMoreGists} = useList();
+
   const renderItem = ({item}) => {
     return <GistItem {...item} />;
   };
@@ -20,8 +21,9 @@ const GistsScreen = () => {
       <FlatList
         data={list}
         renderItem={renderItem}
-        keyExtractor={item => item.id}
+        keyExtractor={(item, i) => item.id + i}
         ListHeaderComponent={Header}
+        onEndReached={handleLoadMoreGists}
       />
     </SafeAreaView>
   );
