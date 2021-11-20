@@ -6,4 +6,8 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
+  smallContainer: {
+    alignItems: 'center',
+    paddingVertical: 10,
+  },
 });

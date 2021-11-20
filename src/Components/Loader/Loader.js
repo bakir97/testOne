@@ -4,8 +4,8 @@ import {styles} from './styles';
 
 const Loader = ({small}) => {
   return (
-    <View style={!small && styles.fullContainer}>
-      <Text>Loading</Text>
+    <View style={small ? styles.smallContainer : styles.fullContainer}>
+      <Text>Loading...</Text>
     </View>
   );
 };
